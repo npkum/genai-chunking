@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic Chunking</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Main container with side menu -->
+    <div class="container">
+        <!-- Side Menu -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="index.html" class="menu-item">Why Chunking</a></li>
+                <li class="submenu">
+                    <a href="#" class="menu-item">What is Chunking</a>
+                    <ul class="submenu-items">
+                        <li><a href="chunking.html" class="submenu-link">Chunking and RAG</a></li>
+                        <li><a href="chunking_types.html" class="submenu-link">Chunking Strategies </a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#" class="menu-item">How to choose Right Chunking Strategy</a>
+                    <ul class="submenu-items">
+                        <li><a href="right_chunking_strategy.html" class="submenu-link">Right Chunking Strategy</a></li>
+						<li><a href="Fixed_length_chunking.html" class="submenu-link">Fixed-length Chunking</a></li>
+                        <li><a href="Recursive_Splitting_chunking.html" class="submenu-link">Recursive Chunking</a></li>
+						<li><a href="Content_aware_chunking.html" class="submenu-link">Content-aware Chunking</a></li>
+						<ul>
+							<li><a href="Adaptive_chunking.html" class="submenu-link">Adaptive Chunking</a></li>
+							<li><a href="Sliding_window_chunking.html" class="submenu-link">Sliding-Window Chunking</a></li>
+						</ul>
+						<li><a href="Semantic_chunking.html" class="submenu-link">Semantic Chunking</a></li>
+						<li><a href="Hybrid_chunking.html" class="submenu-link">Hybrid chunking</a></li>
+						<li><a href="Agentic_chunking.html" class="submenu-link">Agentic chunking</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://www.linkedin.com/in/kumar-np" target="_blank" class="menu-item">Contact</a></li>
+            </ul>
+        </div>
+  <!-- Main content area -->
+
+    <div class="container">
+        <div class="text-content">
+    <div class="section">
+   <h1>1. Agentic Chunking</h1>
+  <p>
+    Agentic chunking involves breaking the input (e.g., a query or prompt) into smaller, manageable chunks, allowing the model to independently process each chunk of information. These chunks are then analysed individually to determine their relevance to the overall task i.e. context-aware. Afterward, the processed outputs from each chunk are recombined into a coherent, unified response.
+  </p>
+  </div>
+
+  <h2>1.1 Use Cases</h2>
+  <div class="section">
+    <ul>
+      <li><strong>Contract Review and Analysis (Legal Industry )</strong>:Agentic chunking can enhance legal document analysis by breaking contracts, agreements, and court rulings into smaller, context-aware chunks like clauses, terms, and obligations. This method helps to identify key elements such as exceptions or conditions and present them in an organized manner. It can also automatically flag areas requiring human review, like vague clauses or conflicting terms, and generate summaries for clients or legal professionals.</li>
+	  
+      <li><strong>Medical Record Analysis (Healthcare Industry)</strong>: Agentic chunking can help analyse patient medical records by breaking down extensive, data into actionable chunks, such as symptoms, diagnoses, treatments, and patient history. Important details can be extracted from a patient’s medical history and organized by context, which can help identify trends or highlight critical health information quickly. And can also help with.</li>
+	  
+	  <li><strong>Risk Analysis and Financial Report Summarization (Finance Industry)</strong>: Agentic chunking can be employed to analyse financial report by segmenting documents into contextually relevant chunks (e.g., revenue growth, debt obligations, market forecasts), agentic chunking can improve the efficiency of risk assessments or compliance checks.</li>    
+    </ul>
+  </div>
+
+  
+<h2>1.2 Agentic Chunking Sample Code-1</h2>
+<div class="section">
+  <div style="width: 100%; max-width: 950px; height: 300px; overflow: hidden; border: 1px solid #ccc; border-radius: 8px;">
+    <iframe src="implementation_code/Agentic-Chunking_code.html" width="100%" height="100%" style="border: none; "></iframe>
+  </div>
+</div>
+ 
+ <h2>1.3 Agentic chunking Result-1</h2>
+<div class="section">
+<div class="image">
+  <img class ="clickableImage thumbnail" src="images/agentic_chunking_result.png" alt="Agentic Chunking Example Result" width=50%>
+</div>
+</div>
+<!-- Modal for Enlarged Image -->
+<div id="imageModal" class="modal">
+  <span id="closeModal" class="close">&times;</span>
+  <img id="modalImage" class="modal-content zoom-animation">
+</div>
+<h2>1.4 Agentic Chunking Sample Code-2</h2>
+<div class="section">
+  <div style="width: 100%; max-width: 950px; height: 300px; overflow: hidden; border: 1px solid #ccc; border-radius: 8px;">
+    <iframe src="implementation_code/Agentic-Chunking_Embedding_code.html" width="100%" height="100%" style="border: none; "></iframe>
+  </div>
+</div>
+ 
+ <h2>1.5 Agentic chunking Result-2</h2>
+<div class="section">
+<div class="image">
+  <img class="clickableImage thumbnail" src="images/agentic_chunking_embedding_result.png" alt="Agentic Chunking Embedding Example Result" class="thumbnail" width=50%>
+</div>
+</div>
+
+<!-- Modal for Enlarged Image -->
+<div id="imageModal" class="modal">
+  <span id="closeModal" class="close">&times;</span>
+  <img id="modalImage" class="modal-content zoom-animation">
+</div>
+
+  <h2>1.4 Pros and Cons of Agentic Chunking</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Pros</th>
+        <th>Cons</th>
+      </tr>
+    </thead>
+     <tbody>
+      <tr>
+        <td><b>Modular processing</b> Allows for more flexible and adaptable responses. If certain chunks need more detailed analysis or interpretation, they can be processed separately without affecting the entire input.</td>
+        <td><b>Increased Complexity in Output Integration</b>: Recombining processed chunks into a unified output requires careful handling to ensure that the response is seamless and coherent. Without proper integration, the response might appear disjointed or lack logical flow</td>
+      </tr>
+      <tr>
+        <td><b>Context Preservation </b>: By breaking down the input into chunks, the model can preserve local context within each chunk, potentially improving the coherence of individual parts of the response.</td>
+        <td><b>Loss of Global Context</b>: While chunks are processed independently, the model might lose the overall, larger context if the relationships between chunks aren't effectively maintained or recombined.</td>
+      </tr>
+	  <tr>
+        <td><b>Improved Manageability and Efficiency</b>: Allows the model to focus on more manageable pieces of information, which can help prevent overwhelming the model with too much data at once.</td>
+        <td><b>Higher Computational Cost</b>: While chunking can lead to some efficiencies, it might require additional resources to track, process, and integrate the chunks, especially when the input is highly fragmented or when the recombination process is complex.</td>
+      </tr>
+    </tbody>
+  </table>
+
+<!-- Image enlarge script -->
+<script>
+  const clickableImages = document.querySelectorAll(".clickableImage");
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const closeModal = document.getElementById("closeModal");
+
+  clickableImages.forEach((img) => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    });
+  });
+
+  closeModal.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
+
+
+
+</script>
+<!-- Pagination Navigation Buttons -->
+    <div class="pagination">
+        <a href="Hybrid_chunking.html" class="slim-button">&#9665; Previous</a>
+        <!-- <a href="Agenticchunking.html" class="slim-button">Next &#9655;</a> -->
+    </div>	
+   </div>
+  </div>
+</div>
+
+<!-- Floating Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});"> 
+        ↑
+    </div>
+
+    <script>
+        // Back to Top button visibility when scrolled more than 20%
+        window.onscroll = function() {
+            var topButton = document.querySelector(".back-to-top");
+            var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+            var documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            if (scrollPosition > documentHeight * 0.2) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        };
+    </script>
+
+
+
+
+<!-- Header -->
+    <script>
+        document.body.insertAdjacentHTML("afterbegin", `
+            <header>
+                <h1>What , Why and How of Chunking in RAG</h1>
+            </header>
+        `);
+	</script>
+	
+<!-- Footer -->
+
+    <script>
+        document.body.insertAdjacentHTML("beforeend", `
+            <div class="footer">
+                <p>Linkedin: 
+                    <a href="https://www.linkedin.com/in/kumar-np" target="_blank">Kumar N.P <img src="https://npkum.github.io/AU-Diabetes/images/npk-2.PNG" alt="gaja" title="gaja" height="22" width="22"></a> 
+                    
+                </p>
+            </div>
+        `);
+    </script>
+
+    <script src="scripts/script.js"></script>
+
+</body>
+</html>

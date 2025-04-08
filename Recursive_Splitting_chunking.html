@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursive Character TextSplitting Chunking</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Main container with side menu -->
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="index.html" class="menu-item">Why Chunking</a></li>
+                <li class="submenu">
+                    <a href="#" class="menu-item">What is Chunking</a>
+                    <ul class="submenu-items">
+                        <li><a href="chunking.html" class="submenu-link">Chunking and RAG</a></li>
+                        <li><a href="chunking_types.html" class="submenu-link">Chunking Strategies </a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#" class="menu-item">How to choose Right Chunking Strategy</a>
+                    <ul class="submenu-items">
+                        <li><a href="right_chunking_strategy.html" class="submenu-link">Right Chunking Strategy</a></li>
+						<li><a href="Fixed_length_chunking.html" class="submenu-link">Fixed-length Chunking</a></li>
+                        <li><a href="Recursive_Splitting_chunking.html" class="submenu-link">Recursive Chunking</a></li>
+						<li><a href="Content_aware_chunking.html" class="submenu-link">Content-aware Chunking</a></li>
+						<ul>
+							<li><a href="Adaptive_chunking.html" class="submenu-link">Adaptive Chunking</a></li>
+							<li><a href="Sliding_window_chunking.html" class="submenu-link">Sliding-Window Chunking</a></li>
+						</ul>
+						<li><a href="Semantic_chunking.html" class="submenu-link">Semantic Chunking</a></li>
+						<li><a href="Hybrid_chunking.html" class="submenu-link">Hybrid chunking</a></li>
+						<li><a href="Agentic_chunking.html" class="submenu-link">Agentic chunking</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://www.linkedin.com/in/kumar-np" target="_blank" class="menu-item">Contact</a></li>
+            </ul>
+        </div>
+
+  <!-- Main content area -->
+
+    <div class="container">
+        <div class="text-content">
+  <h1>1. RecursiveCharacter Text Splitting</h1>
+  <div class="section">
+    <p>
+      RecursiveCharacter text splitting is an effective technique for dividing text into smaller, manageable chunks based on character boundaries. This method utilizes a recursive approach, continuously breaking down the text until it reaches the desired chunk size.
+    </p>
+    <p>
+      The process begins by defining an initial chunk size, which can be determined by a specified number of characters or other text units, such as sentences or paragraphs. This initial size acts as a starting point for further division.
+    </p>
+    <p>
+      Once the initial chunk is established, the algorithm examines the content within each chunk to identify natural language boundaries, including punctuation marks (like periods for sentences) and specific tags (such as HTML tags for paragraphs). As the algorithm identifies these boundaries, it adjusts the chunk sizes to ensure that each resulting segment maintains semantic coherence.
+    </p>
+    <p>
+      For example, if the initial chunk contains multiple sentences, the algorithm will split it at appropriate sentence boundaries, ensuring that each chunk is not only the right size but also retains its meaning and context. This approach is beneficial for creating well-structured text segments that are easy to process and understand.
+    </p>
+  </div>
+
+  <h2>1.1 Use Cases</h2>
+  <div class="section">
+    <ul>
+      <li><strong>Case Law Research (Legal):</strong> Breaking down complex case law into simpler parts for easier interpretation and retrieval.</li>
+      <li><strong>Patient Education (Health):</strong> Tailoring educational materials into digestible parts for patients based on their specific conditions.</li>
+      <li><strong>Regulatory Compliance (Finance):</strong> Organizing compliance documents into smaller parts to facilitate easier review and adherence to regulations.</li>
+      <li><strong>Research Papers (Education):</strong> Assisting students and researchers in digesting complex research by segmenting information into key themes or findings.</li>
+      <li><strong>SEO Optimization (Media and Publishing):</strong> Creating snippets or summaries of content to improve search engine visibility and user engagement.</li>
+    </ul>
+  </div>
+
+  
+<h2>1.2 Recursive Character Chunking Sample Code</h2>
+<div class="section">
+  <div style="width: 100%; max-width: 950px; height: 300px; overflow: hidden; border: 1px solid #ccc; border-radius: 8px;">
+    <iframe src="implementation_code/RecursiveCharacter_TextSplitting_code.html" width="100%" height="100%" style="border: none; "></iframe>
+  </div>
+</div>
+ 
+ <h2>1.3 Sample RecursiveCharacter Text Splitting Result</h2>
+<div class="section">
+<div class="image">
+  <img id="clickableImage" src="images/Recursive_Splitting_chunking_result.png" alt="RecursiveCharacter Text Splitting Example Result" class="thumbnail" class="image" width="80%">
+  </div>
+</div>
+
+<!-- Modal for Enlarged Image -->
+<div id="imageModal" class="modal">
+  <span id="closeModal" class="close">&times;</span>
+  <img id="modalImage" class="modal-content zoom-animation">
+</div>
+
+  
+  <h2>1.4 Pros and Cons of RecursiveCharacter Text Splitting</h2>
+  <div class="section pros-cons">
+    <div>
+      <h3>Pros</h3>
+      <ul>
+        <li>Adjusts chunk boundaries dynamically based on the structure of the text, such as sentences and paragraphs.</li>
+        <li>Preserves semantic coherence within chunks, making the content easier to understand.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Cons</h3>
+      <ul>
+        <li>More complex to implement than straightforward character-based splitting.</li>
+        <li>Requires more computational resources due to the recursive nature of the process.</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Image enlarge script -->
+<script>
+  const img = document.getElementById("clickableImage");
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const closeModal = document.getElementById("closeModal");
+
+  img.onclick = function() {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  }
+
+  closeModal.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+
+
+
+<!-- Pagination Navigation Buttons -->
+    <div class="pagination">
+        <a href="Fixed_length_chunking.html" class="slim-button">&#9665; Previous</a>
+        <a href="Content_aware_chunking.html" class="slim-button">Next &#9655;</a>
+    </div>	
+  
+  </div>
+  </div>
+
+	</div>
+
+	 <script>
+        function checkPosition() {
+            var textContent = document.querySelector(".text-content");
+            var navButtons = document.getElementById("navButtons");
+            var rect = textContent.getBoundingClientRect();
+            var viewportHeight = window.innerHeight;
+            if (rect.top >= viewportHeight / 4 && rect.bottom <= viewportHeight * 3 / 4) {
+                navButtons.style.display = "block";
+            } else {
+                navButtons.style.display = "none";
+            }
+        }
+
+        window.addEventListener("scroll", checkPosition);
+
+        function goToPrevious() {
+            alert("Previous page functionality to be implemented.");
+        }
+
+        function goToNext() {
+            alert("Next page functionality to be implemented.");
+        }
+    </script>
+
+
+<!-- Floating Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});"> 
+        ↑
+    </div>
+
+    <script>
+        // Back to Top button visibility when scrolled more than 20%
+        window.onscroll = function() {
+            var topButton = document.querySelector(".back-to-top");
+            var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+            var documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            if (scrollPosition > documentHeight * 0.2) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        };
+    </script>
+
+
+
+
+<!-- Header -->
+    <script>
+        document.body.insertAdjacentHTML("afterbegin", `
+            <header>
+                <h1>What , Why and How of Chunking in RAG</h1>
+            </header>
+        `);
+	</script>
+	
+<!-- Footer -->
+
+    <script>
+        document.body.insertAdjacentHTML("beforeend", `
+            <div class="footer">
+                <p>Linkedin: 
+                    <a href="https://www.linkedin.com/in/kumar-np" target="_blank">Kumar N.P <img src="https://npkum.github.io/AU-Diabetes/images/npk-2.PNG" alt="gaja" title="gaja" height="22" width="22"></a> 
+                    
+                </p>
+            </div>
+        `);
+    </script>
+
+    <script src="scripts/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hybrid Chunking</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Main container with side menu -->
+    <div class="container">
+        <!-- Side Menu -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="index.html" class="menu-item">Why Chunking</a></li>
+                <li class="submenu">
+                    <a href="#" class="menu-item">What is Chunking</a>
+                    <ul class="submenu-items">
+                        <li><a href="chunking.html" class="submenu-link">Chunking and RAG</a></li>
+                        <li><a href="chunking_types.html" class="submenu-link">Chunking Strategies </a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#" class="menu-item">How to choose Right Chunking Strategy</a>
+                    <ul class="submenu-items">
+                        <li><a href="right_chunking_strategy.html" class="submenu-link">Right Chunking Strategy</a></li>
+						<li><a href="Fixed_length_chunking.html" class="submenu-link">Fixed-length Chunking</a></li>
+                        <li><a href="Recursive_Splitting_chunking.html" class="submenu-link">Recursive Chunking</a></li>
+						<li><a href="Content_aware_chunking.html" class="submenu-link">Content-aware Chunking</a></li>
+						<ul>
+							<li><a href="Adaptive_chunking.html" class="submenu-link">Adaptive Chunking</a></li>
+							<li><a href="Sliding_window_chunking.html" class="submenu-link">Sliding-Window Chunking</a></li>
+						</ul>
+						<li><a href="Semantic_chunking.html" class="submenu-link">Semantic Chunking</a></li>
+						<li><a href="Hybrid_chunking.html" class="submenu-link">Hybrid chunking</a></li>
+						<li><a href="Agentic_chunking.html" class="submenu-link">Agentic chunking</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://www.linkedin.com/in/kumar-np" target="_blank" class="menu-item">Contact</a></li>
+            </ul>
+        </div>
+  <!-- Main content area -->
+
+    <div class="container">
+        <div class="text-content">
+    <div class="section">
+   <h1>1. Hybrid Chunking</h1>
+  <p>
+    Hybrid chunking integrates multiple chunking methods to maximize the advantages of both fixed-size and semantic chunking. For instance, an initial stage may employ fixed-size chunking for rapid indexing, while the retrieval phase utilizes semantic chunking to maintain contextual integrity. By combining tools like spaCy for semantic analysis with custom scripts for fixed-size chunking, this approach creates a flexible strategy tailored to specific use case requirements.
+  </p>
+  </div>
+
+  <h2>1.1 Use Cases</h2>
+  <div class="section">
+    <ul>
+      <li><strong>Customer service (Retail Industry):</strong> In customer service chatbots, hybrid chunking can effectively retrieve information about product inquiries while ensuring that responses are contextually relevant and enriched with marketing language and details.</li>
+	  
+      <li><strong>Investment analysis (Financial Services):</strong> In investment analysis, hybrid chunking is employed to manage various data types, from formal financial reports to casual market commentary, ensuring thorough evaluation and relevant information extraction.</li>    
+    </ul>
+  </div>
+
+  
+<h2>1.2 Hybrid Chunking Sample Code</h2>
+<div class="section">
+  <div style="width: 100%; max-width: 950px; height: 300px; overflow: hidden; border: 1px solid #ccc; border-radius: 8px;">
+    <iframe src="implementation_code/Hybrid_Chunking_code.html" width="100%" height="100%" style="border: none; "></iframe>
+  </div>
+</div>
+ 
+ <h2>1.3 Hybrid chunking Result</h2>
+<div class="section">
+<div class="image">
+  <img id="clickableImage" src="images/hybrid_chunking_result.png" alt="Hybrid Chunking Example Result" class="thumbnail" width=50%>
+</div>
+</div>
+
+<!-- Modal for Enlarged Image -->
+<div id="imageModal" class="modal">
+  <span id="closeModal" class="close">&times;</span>
+  <img id="modalImage" class="modal-content zoom-animation">
+</div>
+
+  <h2>1.4 Pros and Cons of Hybrid Chunking</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Pros</th>
+        <th>Cons</th>
+      </tr>
+    </thead>
+     <tbody>
+      <tr>
+        <td><b>Improved Contextual Understanding</b>: By combining fixed-size and semantic chunking, it enhances the model's ability to maintain context and relevance in responses.</td>
+        <td><b>Complex Implementation</b>: Developing and maintaining a hybrid system can be more complicated than using a single chunking method.</td>
+      </tr>
+      <tr>
+        <td><b>Customizability</b>: It allows for tailoring the chunking approach to specific use cases, optimizing performance based on the nature of the data and tasks.</td>
+        <td><b>Resource Consumption</b>: It may require more computational resources, impacting performance and response times, especially with larger datasets.</td>
+      </tr>
+	  <tr>
+        <td><b>Efficient Retrieval</b>: The initial fixed-size chunking enables quick indexing, while semantic chunking ensures deeper comprehension during retrieval, improving response accuracy.</td>
+        <td><b>Potential Overhead</b>: The dual-layer processing might introduce delays if not optimized, which could affect real-time applications.</td>
+      </tr>
+	  <tr>
+        <td><b>Dynamic Adaptation</b>: It enables dynamic modification of chunk boundaries based on context or specific requirements of the task.</td>
+        <td><b>Need for Fine-Tuning</b>: The effectiveness of hybrid chunking often depends on careful tuning and evaluation, which can be time-consuming.</td>
+      </tr>
+    </tbody>
+  </table>
+
+<!-- Image enlarge script -->
+<script>
+  const img = document.getElementById("clickableImage");
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const closeModal = document.getElementById("closeModal");
+
+  img.onclick = function() {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  }
+
+  closeModal.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+
+<!-- Pagination Navigation Buttons -->
+    <div class="pagination">
+        <a href="Semantic_chunking.html" class="slim-button">&#9665; Previous</a>
+        <a href="Agentic_chunking.html" class="slim-button">Next &#9655;</a>
+    </div>	
+   </div>
+  </div>
+</div>
+
+<!-- Floating Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});"> 
+        ↑
+    </div>
+
+    <script>
+        // Back to Top button visibility when scrolled more than 20%
+        window.onscroll = function() {
+            var topButton = document.querySelector(".back-to-top");
+            var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+            var documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            if (scrollPosition > documentHeight * 0.2) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        };
+    </script>
+
+
+
+
+<!-- Header -->
+    <script>
+        document.body.insertAdjacentHTML("afterbegin", `
+            <header>
+                <h1>What , Why and How of Chunking in RAG</h1>
+            </header>
+        `);
+	</script>
+	
+<!-- Footer -->
+
+    <script>
+        document.body.insertAdjacentHTML("beforeend", `
+            <div class="footer">
+                <p>Linkedin: 
+                    <a href="https://www.linkedin.com/in/kumar-np" target="_blank">Kumar N.P <img src="https://npkum.github.io/AU-Diabetes/images/npk-2.PNG" alt="gaja" title="gaja" height="22" width="22"></a> 
+                    
+                </p>
+            </div>
+        `);
+    </script>
+
+    <script src="scripts/script.js"></script>
+
+</body>
+</html>

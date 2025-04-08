@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunking-RAG-LLM</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Main container with side menu -->
+    <div class="container">
+        <!-- Side Menu -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="index.html" class="menu-item">Why Chunking</a></li>
+                <li class="submenu">
+                    <a href="#" class="menu-item">What is Chunking</a>
+                    <ul class="submenu-items">
+                        <li><a href="chunking.html" class="submenu-link">Chunking and RAG</a></li>
+                        <li><a href="chunking_types.html" class="submenu-link">Chunking Strategies </a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#" class="menu-item">How to choose Right Chunking Strategy</a>
+                    <ul class="submenu-items">
+                        <li><a href="right_chunking_strategy.html" class="submenu-link">Right Chunking Strategy</a></li>
+						<li><a href="Fixed_length_chunking.html" class="submenu-link">Fixed-length Chunking</a></li>
+                        <li><a href="Recursive_Splitting_chunking.html" class="submenu-link">Recursive Chunking</a></li>
+						<li><a href="Content_aware_chunking.html" class="submenu-link">Content-aware Chunking</a></li>
+						<ul>
+							<li><a href="Adaptive_chunking.html" class="submenu-link">Adaptive Chunking</a></li>
+							<li><a href="Sliding_window_chunking.html" class="submenu-link">Sliding-Window Chunking</a></li>
+						</ul>
+						<li><a href="Semantic_chunking.html" class="submenu-link">Semantic Chunking</a></li>
+						<li><a href="Hybrid_chunking.html" class="submenu-link">Hybrid chunking</a></li>
+						<li><a href="Agentic_chunking.html" class="submenu-link">Agentic chunking</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://www.linkedin.com/in/kumar-np" target="_blank" class="menu-item">Contact</a></li>
+            </ul>
+        </div>
+  <!-- Main content area -->
+
+    <div class="container">
+        <div class="text-content">
+  <h1>1. Fixed-length Chunking</h1>
+  <div class="section">
+    <p>
+      Fixed-length chunking is a straightforward text segmentation technique that divides text into equal-sized segments based on a specific number of characters or words. This approach is particularly effective for processing large volumes of text, as it generates uniform blocks that can simplify analysis. It is especially useful for homogenous datasets, such as news articles or blog posts, where the content shares a similar format and size.
+    </p>
+    <p>
+      However, one significant limitation of fixed-length chunking is that it often disregards the semantic integrity of the text. This means that while it efficiently creates uniform chunks, the meaning and context of the content may be lost. For some applications, the size of the chunks may take precedence over context, making fixed-length chunking a practical choice. Nonetheless, in situations where understanding the content's meaning is crucial, this method may not be ideal.
+    </p>
+  </div>
+
+  <h2>1.1 Use Cases</h2>
+  <div class="section">
+    <ul>
+      <li><strong>Maintenance Alerts (Healthcare):</strong> In healthcare diagnostics, medical guidelines and alert notifications can be enhanced through fixed-length chunking.
+This approach organizes information into concise, standardized segments, making it easier for healthcare professionals to quickly access critical data. By structuring content in this way, clinicians can more efficiently interpret patient information, leading to improved decision-making and better patient outcomes.
+</li>
+      <li><strong>Marketing Campaigns (Advertising):</strong> The evaluation of marketing strategies, where data is systematically categorized into distinct components and metrics, is perfectly suited for structured segmentation. This approach enables marketers to effectively analyse and compare different campaign elements, ensuring optimal performance and cohesive messaging across various channels.</li>
+      <li><strong>Paired-End Genome Sequencing:</strong> The examination of genetic sequences involves data that is consistently organized into specific lengths and patterns. This structure makes it ideal for processing using fixed-length chunks, enhancing the efficiency and accuracy of genomic analysis.</li>
+      <li><strong>Data Collection from Structured Surveys (Education):</strong> In the education sector, particularly when evaluating student feedback or standardized assessments, employing fixed-length chunking can be an effective method for systematically organizing and interpreting response data. This strategy facilitates uniform segmentation of student responses, allowing educators to easily identify trends and insights that can enhance teaching practices and improve learning outcomes. By breaking down the data into manageable sections, educators can more effectively analyse student experiences and performance, ultimately leading to better-informed decisions and improved educational services.</li>
+    </ul>
+  </div>
+<h2>1.2 Fixed-length Chunking Sample Code</h2>
+<div class="section">
+  <div style="width: 100%; max-width: 950px; height: 300px; overflow: hidden; border: 1px solid #ccc; border-radius: 8px;">
+    <iframe src="implementation_code/Fixed-length_Chunking_code.html" width="100%" height="100%" style="border: none; "></iframe>
+  </div>
+</div>
+
+ <h2>1.3 Sample RecursiveCharacter Text Splitting Result</h2>
+  <div class="section">
+  <div class="image">
+    <img id="clickableImage" src="images/fixed_length_chunking_sample_result.png" alt="Fixed-length Chunking Example Result" class="thumbnail" width=50%>
+  </div>	
+ </div>
+
+<!-- Modal for Enlarged Image -->
+<div id="imageModal" class="modal">
+  <span id="closeModal" class="close">&times;</span>
+  <img id="modalImage" class="modal-content zoom-animation">
+</div>
+
+  <h2>1.4 Pros and Cons of Fixed-length Chunking</h2>
+  <div class="section pros-cons">
+    <div>
+      <h3>Pros</h3>
+      <ul>
+        <li><strong>Ease of Implementation:</strong> Ease of Implementation, fixed-length chunking is simple and straightforward, making it easy to apply in various contexts.</li>
+        <li><strong>Precise Control:</strong> Precise Control, this method allows for fine-tuned adjustments to the size of each chunk, enabling tailored processing based on specific needs.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Cons</h3>
+      <ul>
+        <li><strong>Semantic Disruption:</strong> Semantic Disruption, text can be split in ways that disrupt its meaning, potentially confusing readers or systems that rely on context.</li>
+        <li><strong>Information Loss:</strong> Information Loss, there’s a risk of truncating important information at chunk boundaries, which can lead to incomplete understanding or analysis.</li>
+      </ul>
+    </div>
+  </div>
+  
+<!-- Image enlarge script -->
+<script>
+  const img = document.getElementById("clickableImage");
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const closeModal = document.getElementById("closeModal");
+
+  img.onclick = function() {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  }
+
+  closeModal.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+  
+<!-- Pagination Navigation Buttons -->
+    <div class="pagination">
+        <a href="right_chunking_strategy.html" class="slim-button">&#9665; Previous</a>
+        <a href="Recursive_Splitting_chunking.html" class="slim-button">Next &#9655;</a>
+    </div>	
+  
+  </div>
+  </div>
+
+	</div>
+
+	 <script>
+        function checkPosition() {
+            var textContent = document.querySelector(".text-content");
+            var navButtons = document.getElementById("navButtons");
+            var rect = textContent.getBoundingClientRect();
+            var viewportHeight = window.innerHeight;
+            if (rect.top >= viewportHeight / 4 && rect.bottom <= viewportHeight * 3 / 4) {
+                navButtons.style.display = "block";
+            } else {
+                navButtons.style.display = "none";
+            }
+        }
+
+        window.addEventListener("scroll", checkPosition);
+
+        function goToPrevious() {
+            alert("Previous page functionality to be implemented.");
+        }
+
+        function goToNext() {
+            alert("Next page functionality to be implemented.");
+        }
+    </script>
+
+
+<!-- Floating Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});"> 
+        ↑
+    </div>
+
+    <script>
+        // Back to Top button visibility when scrolled more than 20%
+        window.onscroll = function() {
+            var topButton = document.querySelector(".back-to-top");
+            var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+            var documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            if (scrollPosition > documentHeight * 0.2) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        };
+    </script>
+
+
+
+
+<!-- Header -->
+    <script>
+        document.body.insertAdjacentHTML("afterbegin", `
+            <header>
+                <h1>What , Why and How of Chunking in RAG</h1>
+            </header>
+        `);
+	</script>
+	
+<!-- Footer -->
+
+    <script>
+        document.body.insertAdjacentHTML("beforeend", `
+            <div class="footer">
+                <p>Linkedin: 
+                    <a href="https://www.linkedin.com/in/kumar-np" target="_blank">Kumar N.P <img src="https://npkum.github.io/AU-Diabetes/images/npk-2.PNG" alt="gaja" title="gaja" height="22" width="22"></a> 
+                    
+                </p>
+            </div>
+        `);
+    </script>
+
+    <script src="scripts/script.js"></script>
+
+</body>
+</html>

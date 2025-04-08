@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunking-RAG-LLM</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Main container with side menu -->
+    <div class="container">
+        <!-- Side Menu -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="index.html" class="menu-item">Why Chunking</a></li>
+                <li class="submenu">
+                    <a href="#" class="menu-item">What is Chunking</a>
+                    <ul class="submenu-items">
+                        <li><a href="chunking.html" class="submenu-link">Chunking and RAG</a></li>
+                        <li><a href="chunking_types.html" class="submenu-link">Chunking Strategies </a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#" class="menu-item">How to choose Right Chunking Strategy</a>
+                    <ul class="submenu-items">
+                        <li><a href="right_chunking_strategy.html" class="submenu-link">Right Chunking Strategy</a></li>
+						<li><a href="Fixed_length_chunking.html" class="submenu-link">Fixed-length Chunking</a></li>
+                        <li><a href="Recursive_Splitting_chunking.html" class="submenu-link">Recursive Chunking</a></li>
+						<li><a href="Content_aware_chunking.html" class="submenu-link">Content-aware Chunking</a></li>
+						<ul>
+							<li><a href="Adaptive_chunking.html" class="submenu-link">Adaptive Chunking</a></li>
+							<li><a href="Sliding_window_chunking.html" class="submenu-link">Sliding-Window Chunking</a></li>
+						</ul>
+						<li><a href="Semantic_chunking.html" class="submenu-link">Semantic Chunking</a></li>
+						<li><a href="Hybrid_chunking.html" class="submenu-link">Hybrid chunking</a></li>
+						<li><a href="Agentic_chunking.html" class="submenu-link">Agentic chunking</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://www.linkedin.com/in/kumar-np" target="_blank" class="menu-item">Contact</a></li>
+            </ul>
+        </div>
+
+  <!-- Main content area -->
+
+    <div class="container">
+        <div class="text-content">
+           <h1>How To Choose Right Chunking Strategy for RAG Applications</h1>
+            <p>There are various chunking strategies, each with its own strengths and weaknesses. Understanding these techniques is essential for applying the right strategy in the appropriate scenario</p>
+			<p> To address these risks, it’s important to implement chunking strategies that can adjust chunk sizes based on the context, rather than applying a uniform approach.</p>
+			<p>This tailored approach allows you to move beyond a one-size-fits-all methodology, maximizing the effectiveness of your application. In the next section, we will explore various text chunking and splitting strategies, with a sample code to help you implement these techniques effectively.</p>			
+			      </div>
+			 <div class="image">
+		          <br><br><img src="images/how_to_choose_right_chunking_strategy.png" alt="Chunking Illustration" width="60%">				
+         </div>
+  </div>
+  </div >
+	<div class="container">
+		<div class="text-content">
+		<br>
+        <ul>
+			<li><a href="Fixed_length_chunking.html" target="_blank">Fixed-length Chunking</a></li>
+			<li><a href="Recursive_Splitting_chunking.html" target="_blank">RecursiveCharacter Text Splitting</a></li>
+			<li><a href="Content_aware_chunking.html" target="_blank">Content-aware Chunking (Document Specific Chunking)</a></li>
+            <ul>
+                <li><a href="Adaptive_chunking.html" target="_blank">Adaptive Chunking</a></li>
+                <li><a href="Sliding_window_chunking.html" target="_blank">Sliding Window Chunking</a></li>
+            </ul>
+        </li>
+        <li><a href="Semantic_chunking.html" target="_blank">Semantic Chunking</a></li>
+        <li><a href="Hybrid_chunking.html" target="_blank">Hybrid Chunking</a></li>
+        <li><a href="Agentic_chunking.html" target="_blank">Agentic Chunking</a></li>
+    </ul>
+		<!-- Pagination Navigation Buttons -->
+    <div class="pagination">
+        <a href="chunking_types.html" class="slim-button">&#9665; Previous</a>
+        <a href="Fixed_length_chunking.html" class="slim-button">Next &#9655;</a>
+    </div>	
+  
+
+	</div>
+
+	 <script>
+        function checkPosition() {
+            var textContent = document.querySelector(".text-content");
+            var navButtons = document.getElementById("navButtons");
+            var rect = textContent.getBoundingClientRect();
+            var viewportHeight = window.innerHeight;
+            if (rect.top >= viewportHeight / 4 && rect.bottom <= viewportHeight * 3 / 4) {
+                navButtons.style.display = "block";
+            } else {
+                navButtons.style.display = "none";
+            }
+        }
+
+        window.addEventListener("scroll", checkPosition);
+
+        function goToPrevious() {
+            alert("Previous page functionality to be implemented.");
+        }
+
+        function goToNext() {
+            alert("Next page functionality to be implemented.");
+        }
+    </script>
+
+
+<!-- Floating Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});"> 
+        ↑
+    </div>
+
+    <script>
+        // Back to Top button visibility when scrolled more than 20%
+        window.onscroll = function() {
+            var topButton = document.querySelector(".back-to-top");
+            var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+            var documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            if (scrollPosition > documentHeight * 0.2) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        };
+    </script>
+
+
+
+
+<!-- Header -->
+    <script>
+        document.body.insertAdjacentHTML("afterbegin", `
+            <header>
+                <h1>What , Why and How of Chunking in RAG</h1>
+            </header>
+        `);
+	</script>
+	
+<!-- Footer -->
+
+    <script>
+        document.body.insertAdjacentHTML("beforeend", `
+            <div class="footer">
+                <p>Linkedin: 
+                    <a href="https://www.linkedin.com/in/kumar-np" target="_blank">Kumar N.P <img src="https://npkum.github.io/AU-Diabetes/images/npk-2.PNG" alt="gaja" title="gaja" height="22" width="22"></a> 
+                    
+                </p>
+            </div>
+        `);
+    </script>
+
+    <script src="scripts/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunking Strategies</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Main container with side menu -->
+    <div class="container">
+        <!-- Side Menu -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="index.html" class="menu-item">Why Chunking</a></li>
+                <li class="submenu">
+                    <a href="#" class="menu-item">What is Chunking</a>
+                    <ul class="submenu-items">
+                        <li><a href="chunking.html" class="submenu-link">Chunking and RAG</a></li>
+                        <li><a href="chunking_types.html" class="submenu-link">Chunking Strategies </a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#" class="menu-item">How to choose Right Chunking Strategy</a>
+                    <ul class="submenu-items">
+                        <li><a href="right_chunking_strategy.html" class="submenu-link">Right Chunking Strategy</a></li>
+						<li><a href="Fixed_length_chunking.html" class="submenu-link">Fixed-length Chunking</a></li>
+                        <li><a href="Recursive_Splitting_chunking.html" class="submenu-link">Recursive Chunking</a></li>
+						<li><a href="Content_aware_chunking.html" class="submenu-link">Content-aware Chunking</a></li>
+						<ul>
+							<li><a href="Adaptive_chunking.html" class="submenu-link">Adaptive Chunking</a></li>
+							<li><a href="Sliding_window_chunking.html" class="submenu-link">Sliding-Window Chunking</a></li>
+						</ul>
+						<li><a href="Semantic_chunking.html" class="submenu-link">Semantic Chunking</a></li>
+						<li><a href="Hybrid_chunking.html" class="submenu-link">Hybrid chunking</a></li>
+						<li><a href="Agentic_chunking.html" class="submenu-link">Agentic chunking</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://www.linkedin.com/in/kumar-np" target="_blank" class="menu-item">Contact</a></li>
+            </ul>
+        </div>
+
+  <!-- Main content area -->
+
+    <div class="container">
+        <div class="text-content">
+           <h1>Chunking Strategies for RAG enabled LLM Applications</h1>
+            <p>Understanding the different types of chunking in RAG is essential for optimizing both retrieval and generation processes. This ensures that the system can effectively manage various types of input data. One significant challenge is finding the right size for these chunks. If the segments are either too large or too small, it can result in issues like incomplete information, fragmented sentences, or a loss of meaning. Such problems may lead the language model to generate incorrect responses or even fabricate information. </p>
+			<p> To address these risks, it’s important to implement chunking strategies that can adjust chunk sizes based on the context, rather than applying a uniform approach.</p>
+			
+			      </div>
+			 <div class="image">
+		          <img src="images/Chunking_Strategies.png" alt="Chunking Illustration" width="40%">				
+         </div>
+  </div>
+  </div >
+
+ <div class="container">
+  <div class="text-content">
+            <ul>
+                <h2>1. Fixed Size Chunking</h2>
+            <p>Fixed-size chunking involves dividing text into segments of a predetermined size, such as 100 words or 200 characters. This technique can optionally incorporate overlaps between chunks to preserve context. Known for its computational efficiency and straightforward implementation, fixed-size chunking is widely used in natural language processing (NLP) applications, particularly for texts that are relatively uniform where maintaining context across boundaries is less critical. Its simplicity and effectiveness make it one of the most common chunking methods.</p>
+
+            <h2>2. Recursive Chunking</h2>
+            <p>Fixed-size chunking is straightforward to implement but overlooks the inherent structure of text. Recursive chunking offers an alternative. In contrast, recursive chunking offers a more sophisticated approach by iteratively and hierarchically dividing text into smaller segments based on various separators or criteria. If the first attempt at chunking doesn’t yield the desired sizes, the method recursively applies itself to the resulting segments with different separators or criteria until the target size is achieved, while acknowledging that the exact sizes may still vary. It exemplifies this by iteratively breaking down text into smaller segments to achieve uniformity in size, while acknowledging that the exact sizes may still vary.</p>
+            <p>This adaptability makes Recursive Character Chunking particularly effective for texts with diverse formats and preserving contextual integrity for complex texts.</p>
+
+            <h2>3. Content-aware Chunking (Document Specific Chunking)</h2>
+            <p>Document-specific chunking is a strategy that creates content chunks by recognizing the inherent structure of a document, such as paragraphs and sections. By aligning chunks with logical divisions, this method preserves coherence. It is particularly effective for structured formats like Markdown and HTML, as it enhances the relevance and usability of the retrieved information, ensuring that the text remains coherent and well-organized.</p>
+
+            <h2>4. Semantic Chunking</h2>
+            <p>Semantic Chunking is a method that organizes text into meaningful, semantically complete sections based on the relationships between ideas. Each section, or "chunk," represents a cohesive concept, ensuring the integrity of the information for accurate retrieval and generation. Although this approach is slower and more computationally intensive, it is ideal for natural language processing (NLP) tasks that require high semantic accuracy, such as summarization and detailed question answering.</p>
+            <p>The "SemanticChunker" tool enhances this process by dynamically selecting breakpoints between sentences or paragraphs based on the similarity of their embeddings. This ensures that each chunk comprises semantically related sentences, further improving the coherence of the information. By focusing on the meaning and context within the text, Semantic Chunking significantly enhances the quality of information retrieval, making it an excellent choice when preserving semantic integrity is crucial.</p>
+
+            <h2>5. Agentic Chunking</h2>
+            <p>Agentic Chunking is an advanced technique that leverages large language models (LLMs) to optimize the size and content of text segments based on contextual analysis. By examining the information, the LLM identifies ideal segmentation points that enhance its understanding and performance. This strategy mimics human document processing, aiming to automate the way humans chunk information.</p>
+            <p>The Agentic Chunking approach is particularly effective for managing complex and dynamic documents, where a nuanced understanding of context is beneficial. By employing this method, we can achieve a more human-like grasp of text organization and improve overall processing efficiency.</p>
+            </ul>
+		<!-- Pagination Navigation Buttons -->
+    <div class="pagination">
+        <a href="chunking.html" class="slim-button">&#9665; Previous</a>
+        <a href="right_chunking_strategy.html" class="slim-button">Next &#9655;</a>
+    </div>	
+  
+
+	</div>
+
+	 <script>
+        function checkPosition() {
+            var textContent = document.querySelector(".text-content");
+            var navButtons = document.getElementById("navButtons");
+            var rect = textContent.getBoundingClientRect();
+            var viewportHeight = window.innerHeight;
+            if (rect.top >= viewportHeight / 4 && rect.bottom <= viewportHeight * 3 / 4) {
+                navButtons.style.display = "block";
+            } else {
+                navButtons.style.display = "none";
+            }
+        }
+
+        window.addEventListener("scroll", checkPosition);
+
+        function goToPrevious() {
+            alert("Previous page functionality to be implemented.");
+        }
+
+        function goToNext() {
+            alert("Next page functionality to be implemented.");
+        }
+    </script>
+
+
+<!-- Floating Back to Top Button -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});"> 
+        ↑
+    </div>
+
+    <script>
+        // Back to Top button visibility when scrolled more than 20%
+        window.onscroll = function() {
+            var topButton = document.querySelector(".back-to-top");
+            var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+            var documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            if (scrollPosition > documentHeight * 0.2) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        };
+    </script>
+
+
+
+
+<!-- Header -->
+    <script>
+        document.body.insertAdjacentHTML("afterbegin", `
+            <header>
+                <h1>What , Why and How of Chunking in RAG</h1>
+            </header>
+        `);
+	</script>
+	
+<!-- Footer -->
+
+    <script>
+        document.body.insertAdjacentHTML("beforeend", `
+            <div class="footer">
+                <p>Linkedin: 
+                    <a href="https://www.linkedin.com/in/kumar-np" target="_blank">Kumar N.P <img src="https://npkum.github.io/AU-Diabetes/images/npk-2.PNG" alt="gaja" title="gaja" height="22" width="22"></a> 
+                    
+                </p>
+            </div>
+        `);
+    </script>
+
+    <script src="scripts/script.js"></script>
+
+</body>
+</html>
