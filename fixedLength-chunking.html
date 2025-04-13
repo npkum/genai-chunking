@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunking Playbook for RAG</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <h1>The Chunking Playbook for RAG</h1>
+            <button class="menu-btn">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="what_is_chunking.html">What is Chunking</a>
+                <a href="whychunking.html">Why Chunking</a>
+                <div class="menu-item">
+                    <a href="how2choose_strategies.html">How to Choose Chunking Strategies</a>
+                    <div class="submenu">
+                        <a href="fixedLength-chunking.html">Fixed-length Chunking</a>
+                        <a href="recursive-chunking.html">Recursive Chunking</a>
+                        <a href="contentAware-chunking.html">Content-aware Chunking</a>
+                        <a href="adaptive-chunking.html" class="indented">Adaptive Chunking</a>
+                        <a href="slidingWindow-chunking.html" class="indented">Sliding-window Chunking</a>
+                        <a href="semantic-chunking.html">Semantic Chunking</a>
+                        <a href="hybrid-chunking.html">Hybrid Chunking</a>
+                        <a href="agentic-chunking.html">Agentic Chunking</a>
+                    </div>
+                </div>
+                <a href="https://www.linkedin.com/in/kumar-np" target="_blank">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container main-content">
+        <h1>Fixed-length Chunking</h1>
+        <p>Fixed-length chunking is a straightforward text segmentation technique that divides text into equal-sized segments based on a specific number of characters or words. This approach is particularly effective for processing large volumes of text, as it generates uniform blocks that can simplify analysis. It is especially useful for homogenous datasets, such as news articles or blog posts, where the content shares a similar format and size.</p>
+
+        <div class="intro-wrapper">
+            <div class="intro-text">
+                <p>However, one significant limitation of fixed-length chunking is that it often disregards the semantic integrity of the text. This means that while it efficiently creates uniform chunks, the meaning and context of the content may be lost. For some applications, the size of the chunks may take precedence over context, making fixed-length chunking a practical choice. Nonetheless, in situations where understanding the content's meaning is crucial, this method may not be ideal.</p>
+            </div>
+            
+        </div>
+
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h2>Use Cases</h2>
+                <h3>Maintenance Alerts (Healthcare)</h3>
+                <p>In healthcare diagnostics, medical guidelines and alert notifications can be enhanced through fixed-length chunking. This approach organizes information into concise, standardized segments, making it easier for healthcare professionals to quickly access critical data. By structuring content in this way, clinicians can more efficiently interpret patient information, leading to improved decision-making and better patient outcomes.</p>
+
+                <h3>Marketing Campaigns (Advertising)</h3>
+                <p>The evaluation of marketing strategies, where data is systematically categorized into distinct components and metrics, is perfectly suited for structured segmentation. This approach enables marketers to effectively analyse and compare different campaign elements, ensuring optimal performance and cohesive messaging across various channels.</p>
+
+                <h3>Paired-End Genome Sequencing (Analysis of Genetic Sequences in Life Sciences)</h3>
+                <p>The examination of genetic sequences involves data that is consistently organized into specific lengths and patterns. This structure makes it ideal for processing using fixed-length chunks, enhancing the efficiency and accuracy of genomic analysis.</p>
+
+                <h3>Data Collection from Structured Surveys (Education)</h3>
+                <p>In the education sector, particularly when evaluating student feedback or standardized assessments, employing fixed-length chunking can be an effective method for systematically organizing and interpreting response data. This strategy facilitates uniform segmentation of student responses, allowing educators to easily identify trends and insights that can enhance teaching practices and improve learning outcomes. By breaking down the data into manageable sections, educators can more effectively analyse student experiences and performance, ultimately leading to better-informed decisions and improved educational services.</p>
+
+                <h2>Fixed-length Chunking Code</h2>
+                <div class="section">
+                    <div style="width: 100%; max-width: 950px; height: 300px; overflow: hidden; border: 1px solid #ccc; border-radius: 8px;">
+                        <iframe src="implementation_code/Fixed-length_Chunking_code.html" width="100%" height="100%" style="border: none;"></iframe>
+                    </div>
+                </div>
+
+                <h2>Example of Fixed-length Chunking Result</h2>
+                <div class="image-container">
+                <img src="images/fixed_length_chunking_sample_result.png" alt="Fixed-length Chunking" class="content-image center" width="45%">
+                <div class="zoom-controls">
+                    <span class="zoom-icon zoom-in"><img src="images/zoom-in_24.png" alt="Zoom In"></span>
+                    <span class="zoom-icon zoom-out"><img src="images/zoom-out_24.png" alt="Zoom Out"></span>
+                </div>
+            </div>
+
+			<h2> Pros and Cons of Fixed-length Chunking</h2>
+			<table table class="pros-cons">
+				<thead>
+					<tr >
+						<th>Pros</th>
+						<th>Cons</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><b>Ease of Implementation</b>: Fixed-length chunking is simple and straightforward, making it easy to apply in various contexts.</td>
+						<td><b>Semantic Disruption</b>: Text can be split in ways that disrupt its meaning, potentially confusing readers or systems that rely on context.</td>
+					</tr>
+					<tr>
+						<td><b>Precise Control</b>: This method allows for fine-tuned adjustments to the size of each chunk, enabling tailored processing based on specific needs.</td>
+						<td><b>Information Loss</b>: There’s a risk of truncating important information at chunk boundaries, which can lead to incomplete understanding or analysis.</td>
+					</tr>
+				</tbody>
+			</table>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="whychunking.html"><span>◁</span> Previous</a>
+            <a href="recursive-chunking.html">Next <span>▷</span></a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Linkedin: <a href="https://www.linkedin.com/in/kumar-np" target="_blank" class="footer-link">Kumar N.P <img src="images/npk-2.PNG" alt="gaja" title="gaja" height="22" width="22"></a></p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">↑</button>
+
+    <!-- Single java script reference -->
+    <script src="scripts/script_chunk.js"></script>
+</body>
+</html>

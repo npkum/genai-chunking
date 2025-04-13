@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunking Playbook for RAG</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <h1>The Chunking Playbook for RAG</h1>
+            <button class="menu-btn">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="what_is_chunking.html">What is Chunking</a>
+                <a href="whychunking.html">Why Chunking</a>
+                <div class="menu-item">
+                    <a href="how2choose_strategies.html">How to Choose Chunking Strategies</a>
+                    <div class="submenu">
+                        <a href="fixedLength-chunking.html">Fixed-length Chunking</a>
+                        <a href="recursive-chunking.html">Recursive Chunking</a>
+                        <a href="contentAware-chunking.html">Content-aware Chunking</a>
+                        <a href="adaptive-chunking.html" class="indented">Adaptive Chunking</a>
+                        <a href="slidingWindow-chunking.html" class="indented">Sliding-window Chunking</a>
+                        <a href="semantic-chunking.html">Semantic Chunking</a>
+                        <a href="hybrid-chunking.html">Hybrid Chunking</a>
+                        <a href="agentic-chunking.html">Agentic Chunking</a>
+                    </div>
+                </div>
+                <a href="https://www.linkedin.com/in/kumar-np" target="_blank">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container main-content">
+        <h1>Semantic Chunking</h1>
+		<p>Semantic chunking focuses on the relationships within a text by breaking it down into meaningful, semantically complete segments. This method maintains the integrity of the information during retrieval, resulting in more accurate and contextually relevant outcomes. Although it is slower than traditional chunking strategies, semantic chunking utilizes advanced natural language processing (NLP) tools to segment text according to its meaning and context. By identifying shifts in topics or themes, it ensures that each chunk conveys a coherent idea or narrative thread.</p>
+		
+
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h2>Use Cases</h2>
+                <h3>Legal Documents (Law)</h3>
+                <p>Semantic chunking aids in organising sections of legal documents that discuss different charges and evidence of these charges, making the extraction of specific information  more efficient for practitioners and legal researchers.</p>
+
+                <h3>Marketing Reports (Business)</h3>
+                <p>Semantic chunking facilitates the organization of sections in marketing reports that analyse various trends or campaign results, streamlining the process of extracting relevant information for marketers and analysts.</p>
+
+                  <h2>Semantic Chunking Code</h2>
+                <div class="section">
+                    <div style="width: 100%; max-width: 950px; height: 300px; overflow: hidden; border: 1px solid #ccc; border-radius: 8px;">
+                        <iframe src="implementation_code/Semantic_Chunking_code.html" width="100%" height="100%" style="border: none;"></iframe>
+                    </div>
+                </div>
+
+                <h2>Example of Sliding Window Chunking Result</h2>
+                <div class="image-container">
+                <img src="images/semantic_chunking_result.png" alt="Semantic Chunking Example Result" class="content-image center" width="45%">
+                <div class="zoom-controls">
+                    <span class="zoom-icon zoom-in"><img src="images/zoom-in_24.png" alt="Zoom In"></span>
+                    <span class="zoom-icon zoom-out"><img src="images/zoom-out_24.png" alt="Zoom Out"></span>
+                </div>
+               </div>
+
+			<h2> Pros and Cons of Semantic Chunking</h2>
+			<table table class="pros-cons">
+				<thead>
+					<tr >
+						<th>Pros</th>
+						<th>Cons</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><b>Ease of Use</b> : spaCy provides a user-friendly interface and pre-built models that make it easy to implement semantic chunking without needing extensive programming knowledge.</td>
+						<td><b>Limitations in Chunking</b> : spaCy’ s built-in chunking might not always align with specific semantic needs, potentially necessitating additional fine-tuning or custom rules.</td>
+					</tr>
+					<tr>
+						<td><b>Customizability</b> : Users can customize models and pipelines to suit specific requirements, enabling tailored semantic chunking for different domains or applications.</td>
+						<td><b>Dependency on Pre-trained Models</b> : The effectiveness of chunking relies on the quality of pre-trained models. In some niche domains, these models may not perform as well without further training.</td>
+					</tr>
+					<tr>
+						<td><b>Robust NLP Features</b> : Beyond chunking, spaCy offers a wide range of natural language processing functionalities (like tokenization, named entity recognition, and part-of-speech tagging), making it a versatile tool.</td>
+						<td><b>Lack of Contextual Awareness</b> : While spaCy excels at syntactic analysis, it may struggle with deeper semantic understanding in complex texts, which can affect the accuracy of chunking.</td>
+					</tr>						
+				</tbody>
+			</table>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="slidingWindow-chunking.html"><span>◁</span> Previous</a>
+            <a href="hybrid-chunking.html">Next <span>▷</span></a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Linkedin: <a href="https://www.linkedin.com/in/kumar-np" target="_blank" class="footer-link">Kumar N.P <img src="images/npk-2.PNG" alt="gaja" title="gaja" height="22" width="22"></a></p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">↑</button>
+
+    <!-- Single java script reference -->
+    <script src="scripts/script_chunk.js"></script>
+</body>
+</html>

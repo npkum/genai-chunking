@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunking Playbook for RAG</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <h1>The Chunking Playbook for RAG</h1>
+            <button class="menu-btn">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="what_is_chunking.html">What is Chunking</a>
+                <a href="whychunking.html">Why Chunking</a>
+                <div class="menu-item">
+                    <a href="how2choose_strategies.html">How to Choose Chunking Strategies</a>
+                    <div class="submenu">
+                        <a href="fixed-chunking.html">Fixed-length Chunking</a>
+                        <a href="recursive-chunking.html">Recursive Chunking</a>
+                        <a href="contentAware-chunking.html">Content-aware Chunking</a>
+                        <a href="adaptive-chunking.html" class="indented">Adaptive Chunking</a>
+                        <a href="slidingWindow-chunking.html" class="indented">Sliding-window Chunking</a>
+                        <a href="semantic-chunking.html">Semantic Chunking</a>
+                        <a href="hybrid-chunking.html">Hybrid Chunking</a>
+                        <a href="agentic-chunking.html">Agentic Chunking</a>
+                    </div>
+                </div>
+                <a href="https://www.linkedin.com/in/kumar-np" target="_blank">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container main-content">
+        <h1>Content-aware Chunking (Document Specific Chunking)</h1>
+        <p>Content-aware chunking encompasses a range of methods that leverage the context of the text to implement more precise chunking strategies. One such approach is sentence-aware chunking, which divides text into segments based on sentence boundaries while adhering to a specified maximum length for each chunk. This method ensures that each segment contains a complete sentence, preserving the grammatical integrity and contextual flow of the original text. This technique is particularly valuable for texts where a comprehensive understanding of each sentence is essential, as it utilizes the inherent characteristics of the content to enhance chunking accuracy.</p>
+
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h2>Use Cases</h2>
+                <h3>Technical Manuals and User Guides (Engineering)</h3>
+                <p>In engineering contexts, particularly when working with intricate technical manuals or detailed user guides, sentence-aware chunking aids in simplifying complex information into more digestible sections.Breaking down complex case law into simpler parts for easier interpretation and retrieval.</p>
+
+                <h3>Training Manuals and Procedures (Manufacturing)</h3>
+                <p>Training manuals and procedures in manufacturing often include essential information. Using sentence-aware chunking ensures that each procedural step is kept intact within a chunk, minimizing the risk of misinterpretation and improving clarity for operators and staff.</p>
+
+                  <h2>Content-aware Chunking Code</h2>
+                <div class="section">
+                    <div style="width: 100%; max-width: 950px; height: 300px; overflow: hidden; border: 1px solid #ccc; border-radius: 8px;">
+                        <iframe src="implementation_code/Content-aware_Chunking_code.html" width="100%" height="100%" style="border: none;"></iframe>
+                    </div>
+                </div>
+
+                <h2>Example of Content-aware Chunking Result</h2>
+                <div class="image-container">
+                <img src="images/content_aware_chunking_result.png" alt="Content-aware Chunking" class="content-image center" width="45%">
+                <div class="zoom-controls">
+                    <span class="zoom-icon zoom-in"><img src="images/zoom-in_24.png" alt="Zoom In"></span>
+                    <span class="zoom-icon zoom-out"><img src="images/zoom-out_24.png" alt="Zoom Out"></span>
+                </div>
+            </div>
+
+			<h2> Pros and Cons of Content-aware Chunking</h2>
+			<table table class="pros-cons">
+				<thead>
+					<tr >
+						<th>Pros</th>
+						<th>Cons</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Offers high customizability, allowing the integration of new languages or domain-specific tokenizers.</td>
+						<td>May operate more slowly than simpler tokenizers due to its in-depth linguistic processing</td>
+					</tr>
+					<tr>
+						<td>NLTK is a well-established library with extensive documentation and strong community support.</td>
+						<td>Might not be the optimal choice for tasks that prioritize semantic context over syntactic accuracy.</td>
+					</tr>
+					<tr>
+						<td>Utilizes pre-trained models to accurately identify sentence and word boundaries, making it especially effective for linguistically complex texts.</td>
+						<td>Segments text based on syntactic rules rather than semantic meaning, which can sometimes result in a loss of context.</td>
+					</tr>					
+				</tbody>
+			</table>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="recursive-chunking.html"><span>◁</span> Previous</a>
+            <a href="adaptive-chunking.html">Next <span>▷</span></a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Linkedin: <a href="https://www.linkedin.com/in/kumar-np" target="_blank" class="footer-link">Kumar N.P <img src="images/npk-2.PNG" alt="gaja" title="gaja" height="22" width="22"></a></p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">↑</button>
+
+    <!-- Single java script reference -->
+    <script src="scripts/script_chunk.js"></script>
+</body>
+</html>

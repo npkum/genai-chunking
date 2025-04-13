@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunking Playbook for RAG</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <h1>The Chunking Playbook for RAG</h1>
+            <button class="menu-btn">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="what_is_chunking.html">What is Chunking</a>
+				<a href="whychunking.html">Why Chunking</a>
+                <div class="menu-item">
+                    <a href="how2choose_strategies.html">How to Choose Chunking Strategies</a>
+                    <div class="submenu">
+                        <a href="fixedLength-chunking.html">Fixed-length Chunking</a>
+                        <a href="recursive-chunking.html">Recursive Chunking</a>
+                        <a href="contentAware-chunking.html">Content-aware Chunking</a>
+						<a href="adaptive-chunking.html`" class="indented">Adaptive Chunking</a>
+						<a href="slidingWindow-chunking.html" class="indented">Sliding-window Chunking</a>
+						<a href="semantic-chunking.html">Semantic Chunking</a>
+                        <a href="hybrid-chunking.html">Hybrid Chunking</a>
+                        <a href="agentic-chunking.html">Agentic Chunking</a>
+                    </div>
+              </div>
+                <a href="https://www.linkedin.com/in/kumar-np" target="_blank">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container main-content">
+        <h1>What is Chunking</h1>
+		<p> Chunking involves breaking information into smaller, manageable pieces to enhance storage and retrieval efficiency. By organizing data this way, it becomes easier for models to retrieve relevant information related to specific questions, leading to more precise and cost-effective generation of responses.
+		<br>In the context of Retrieval-Augmented Generation (RAG), chunking is essential for improving a model’s ability to understand and process complex information by transforming it into digestible segments.</br> </p>
+
+        <div class="intro-wrapper">
+            <div class="intro-text">
+				<p></p>
+				<h2>Types of Chunking</h2>
+                <p>Understanding the different types of chunking in RAG is essential for optimizing both retrieval and generation processes. This ensures that the system can effectively manage various types of input data.</p>
+                <p><br>One significant challenge is finding the right size for these chunks. If the segments are either too large or too small, it can result in issues like incomplete information, fragmented sentences, or a loss of meaning. Such problems may lead the language model to generate incorrect responses or even fabricate information.</br></p>
+                <p><br>To address these risks, it’s important to implement chunking strategies that can adjust chunk sizes based on the context, rather than applying a uniform approach.</br></p>
+            </div>
+            <div class="image-container">
+                <img src="images/Chunking_Strategies.png" alt="Types of Chunking in RAG" class="content-image" width=70%>
+                <div class="zoom-controls">
+                    <span class="zoom-icon zoom-in"><img src="images/zoom-in_24.png" alt="Zoom In"></span>
+                    <span class="zoom-icon zoom-out"><img src="images/zoom-out_24.png" alt="Zoom Out"></span>
+                </div>
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h3>1. Fixed Size Chunking</h3>
+                <p>Fixed-size chunking involves dividing text into segments of a predetermined size, such as 100 words or 200 characters. This technique can optionally incorporate overlaps between chunks to preserve context. Known for its computational efficiency and straightforward implementation, fixed-size chunking is widely used in natural language processing (NLP) applications, particularly for texts that are relatively uniform where maintaining context across boundaries is less critical. Its simplicity and effectiveness make it one of the most common chunking methods.</p>
+                <br> <!-- new line -->
+				
+				<h3>2. Recursive Chunking</h3>
+                <p>Fixed-size chunking is straightforward to implement but overlooks the inherent structure of text. Recursive chunking offers an alternative. In contrast, recursive chunking offers a more sophisticated approach by iteratively and hierarchically dividing text into smaller segments based on various separators or criteria. If the first attempt at chunking doesn’t yield the desired sizes, the method recursively applies itself to the resulting segments with different separators or criteria until the target size is achieved, while acknowledging that the exact sizes may still vary. It exemplifies this by iteratively breaking down text into smaller segments to achieve uniformity in size, while acknowledging that the exact sizes may still vary. This adaptability makes Recursive Character Chunking particularly effective for texts with diverse formats and preserving contextual integrity for complex texts.</p>
+				<br> <!-- new line -->
+                                
+				<h3>3. Content-aware Chunking (Document Specific Chunking)</h3>
+                <p>Document-specific chunking is a strategy that creates content chunks by recognizing the inherent structure of a document, such as paragraphs and sections. By aligning chunks with logical divisions, this method preserves coherence. It is particularly effective for structured formats like Markdown and HTML, as it enhances the relevance and usability of the retrieved information, ensuring that the text remains coherent and well-organized.</p>
+				<br> <!-- new line -->
+                                
+				<h3>4. Semantic Chunking</h3>
+                <p>Semantic Chunking is a method that organizes text into meaningful, semantically complete sections based on the relationships between ideas. Each section, or "chunk," represents a cohesive concept, ensuring the integrity of the information for accurate retrieval and generation. Although this approach is slower and more computationally intensive, it is ideal for natural language processing (NLP) tasks that require high semantic accuracy, such as summarization and detailed question answering. The "SemanticChunker" tool enhances this process by dynamically selecting breakpoints between sentences or paragraphs based on the similarity of their embeddings. This ensures that each chunk comprises semantically related sentences, further improving the coherence of the information. By focusing on the meaning and context within the text, Semantic Chunking significantly enhances the quality of information retrieval, making it an excellent choice when preserving semantic integrity is crucial.</p>
+				<br> <!-- new line -->
+                				
+                <h3>5. Agentic Chunking</h3>
+                <p>Agentic Chunking is an advanced technique that leverages large language models (LLMs) to optimize the size and content of text segments based on contextual analysis. By examining the information, the LLM identifies ideal segmentation points that enhance its understanding and performance. This strategy mimics human document processing, aiming to automate the way humans chunk information. The Agentic Chunking approach is particularly effective for managing complex and dynamic documents, where a nuanced understanding of context is beneficial. By employing this method, we can achieve a more human-like grasp of text organization and improve overall processing efficiency.</p>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="index.html"><span>◁</span> Previous</a>
+            <a href="whychunking.html">Next <span>▷</span></a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Linkedin: <a href="https://www.linkedin.com/in/kumar-np" target="_blank" class="footer-link">Kumar N.P <img src="images/npk-2.PNG" alt="gaja" title="gaja" height="22" width="22"></a></p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">↑</button>
+
+    <!-- Single java script reference -->
+    <script src="scripts/script_chunk.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunking Playbook for RAG</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <h1>The Chunking Playbook for RAG</h1>
+            <button class="menu-btn">☰</button>
+            <div class="nav-links">
+			<a href="index.html">Home</a>
+			<a href="what_is_chunking.html">What is Chunking</a>
+			<a href="whychunking.html">Why Chunking</a>
+            <div class="menu-item">
+            <a href="how2choose_strategies.html">How to Choose Chunking Strategies</a>
+                   <div class="submenu">
+                        <a href="fixedLength-chunking.html">Fixed-length Chunking</a>
+                        <a href="recursive-chunking.html">Recursive Chunking</a>
+                        <a href="contentAware-chunking.html">Content-aware Chunking</a>
+						<a href="adaptive-chunking.html`" class="indented">Adaptive Chunking</a>
+						<a href="slidingWindow-chunking.html" class="indented">Sliding-window Chunking</a>
+						<a href="semantic-chunking.html">Semantic Chunking</a>
+                        <a href="hybrid-chunking.html">Hybrid Chunking</a>
+                        <a href="agentic-chunking.html">Agentic Chunking</a>
+                    </div>
+              </div>
+                <a href="https://www.linkedin.com/in/kumar-np" target="_blank">Contact</a>            </div>
+        </nav>
+    </header>
+
+    <main class="container main-content">
+        <h2>Why Chunking is Needed for RAG Applications</h2>
+		<div class="intro-wrapper">
+            <div class="intro-text">
+                 <p>Chunking is vital in retrieval-augmented generation (RAG) systems because it greatly improves their capacity to efficiently and accurately process, retrieve, and generate relevant information.</p>
+				 <p> Here are a few key reasons why chunking is important in RAG:</p>
+            </div>
+		    <!-- removing the image
+            <div class="image-container">
+                <img src="images/chunking_reasons_for_RAG.png" alt="Types of Chunking in RAG" class="content-image" width=70%>
+                <div class="zoom-controls">
+                    <span class="zoom-icon zoom-in"><img src="images/zoom-in_24.png" alt="Zoom In"></span>
+                    <span class="zoom-icon zoom-out"><img src="images/zoom-out_24.png" alt="Zoom Out"></span>
+                </div>
+            </div>
+			-->
+        </div>
+       
+        
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h3>Optimized Information Processing</h3>
+                <p>Efficient information processing is a key advantage of RAG systems, which often pull in large volumes of data or documents from external sources to generate responses. By breaking this information into smaller, manageable chunks, RAG systems can analyse each segment independently. This segmentation not only enhances computational efficiency but also simplifies the process of identifying and retrieving relevant information quickly, ultimately improving the overall handling of large datasets.</p>
+                
+                <h3>Contextual Relevance and Accuracy</h3>
+                <p>Chunking enhances relevance in RAG systems by enabling them to concentrate on specific pieces of information, which significantly improves the likelihood of generating contextually appropriate responses. By organizing information into well-defined chunks, these systems can maintain context and coherence, resulting in higher-quality outputs. Each chunk acts as a coherent unit, allowing retrieval-augmented generation (RAG) systems to sustain relevance throughout the response generation process. This approach ensures that the final outputs are both accurate and contextually aligned, ultimately enhancing the overall quality of the system's responses.</p>
+                
+                <h3>Scalability and Performance</h3>
+                <p>Chunking significantly enhances the scalability and performance of RAG systems by allowing smaller data segments to be processed in parallel. This approach facilitates efficient handling of large volumes of data, optimizing memory usage and computational resources. As a result, the system can effectively scale to accommodate increasingly complex queries while promptly generating accurate responses, all without compromising performance.</p>
+                
+                <h3>Integration of Multiple Sources</h3>
+                <p>Chunking enhances the ability of LLM-enabled retrieval-augmented generation (RAG) applications to combine information from various sources or documents retrieved during the initial phase. By effectively merging insights from different chunks, the system can deliver comprehensive and well-rounded responses. This capability is especially valuable for knowledge-intensive tasks, where addressing complex queries or creating informative content relies on synthesizing diverse information.</p>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="what_is_chunking.html"><span>&#9665;</span> Previous</a>
+            <a href="how2choose_strategies.html">Next <span>&#9655;</span></a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Linkedin: <a href="https://www.linkedin.com/in/kumar-np" target="_blank" class="footer-link">Kumar N.P <img src="images/npk-2.PNG" alt="gaja" title="gaja" height="22" width="22"></a></p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">↑</button>
+
+    <!-- Single java script reference -->
+    <script src="scripts/script_chunk.js"></script>
+</body>
+</html>

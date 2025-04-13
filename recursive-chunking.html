@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunking Playbook for RAG</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <h1>The Chunking Playbook for RAG</h1>
+            <button class="menu-btn">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="what_is_chunking.html">What is Chunking</a>
+                <a href="whychunking.html">Why Chunking</a>
+                <div class="menu-item">
+                    <a href="how2choose_strategies.html">How to Choose Chunking Strategies</a>
+                    <div class="submenu">
+                        <a href="fixed-chunking.html">Fixed-length Chunking</a>
+                        <a href="recursive-chunking.html">Recursive Chunking</a>
+                        <a href="contentAware-chunking.html">Content-aware Chunking</a>
+                        <a href="adaptive-chunking.html" class="indented">Adaptive Chunking</a>
+                        <a href="slidingWindow-chunking.html" class="indented">Sliding-window Chunking</a>
+                        <a href="semantic-chunking.html">Semantic Chunking</a>
+                        <a href="hybrid-chunking.html">Hybrid Chunking</a>
+                        <a href="agentic-chunking.html">Agentic Chunking</a>
+                    </div>
+                </div>
+                <a href="https://www.linkedin.com/in/kumar-np" target="_blank">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container main-content">
+        <h1>RecursiveCharacter Text Splitting</h1>
+        <p>Is an effective technique for dividing text into smaller, manageable chunks based on character boundaries. This method utilizes a recursive approach, continuously breaking down the text until it reaches the desired chunk size.</p>
+		<p>The process begins by defining an initial chunk size, which can be determined by a specified number of characters or other text units, such as sentences or paragraphs. This initial size acts as a starting point for further division.</p>
+		<p>Once the initial chunk is established, the algorithm examines the content within each chunk to identify natural language boundaries, including punctuation marks (like periods for sentences) and specific tags (such as HTML tags for paragraphs). As the algorithm identifies these boundaries, it adjusts the chunk sizes to ensure that each resulting segment maintains semantic coherence.</p>
+		<p>For example, if the initial chunk contains multiple sentences, the algorithm will split it at appropriate sentence boundaries, ensuring that each chunk is not only the right size but also retains its meaning and context. This approach is beneficial for creating well-structured text segments that are easy to process and understand.
+		</p>
+
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h2>Use Cases</h2>
+                <h3>Case Law Research (Legal)</h3>
+                <p>Breaking down complex case law into simpler parts for easier interpretation and retrieval.</p>
+
+                <h3>Patient Education (Health)</h3>
+                <p>Tailoring educational materials into digestible parts for patients based on their specific conditions.</p>
+
+                <h3>Regulatory Compliance (Finance)</h3>
+                <p>Organizing compliance documents into smaller parts to facilitate easier review and adherence to regulations.</p>
+
+                <h3>Research Papers (Education)</h3>
+                <p>Assisting students and researchers in digesting complex research by segmenting information into key themes or findings.</p>
+				
+				<h3>SEO Optimization (Media and Publishing)</h3>
+                <p>Creating snippets or summaries of content to improve search engine visibility and user engagement.</p>
+
+
+                <h2>RecursiveCharacter Chunking Code</h2>
+                <div class="section">
+                    <div style="width: 100%; max-width: 950px; height: 300px; overflow: hidden; border: 1px solid #ccc; border-radius: 8px;">
+                        <iframe src="implementation_code/RecursiveCharacter_TextSplitting_code.html" width="100%" height="100%" style="border: none;"></iframe>
+                    </div>
+                </div>
+
+                <h2>Example of Recursive Chunking Result</h2>
+                <div class="image-container">
+                <img src="images/Recursive_Splitting_chunking_result.png" alt="Recursive character Chunking" class="content-image center" width="45%">
+                <div class="zoom-controls">
+                    <span class="zoom-icon zoom-in"><img src="images/zoom-in_24.png" alt="Zoom In"></span>
+                    <span class="zoom-icon zoom-out"><img src="images/zoom-out_24.png" alt="Zoom Out"></span>
+                </div>
+            </div>
+
+			<h2> Pros and Cons of Recursive Chunking</h2>
+			<table table class="pros-cons">
+				<thead>
+					<tr >
+						<th>Pros</th>
+						<th>Cons</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Adjusts chunk boundaries dynamically based on the structure of the text, such as sentences and paragraphs.</td>
+						<td>More complex to implement than straightforward character-based splitting.</td>
+					</tr>
+					<tr>
+						<td>Preserves semantic coherence within chunks, making the content easier to understand.</td>
+						<td>Requires more computational resources due to the recursive nature of the process.</td>
+					</tr>
+				</tbody>
+			</table>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="fixedLength-chunking.html"><span>◁</span> Previous</a>
+            <a href="contentAware-chunking.html">Next <span>▷</span></a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Linkedin: <a href="https://www.linkedin.com/in/kumar-np" target="_blank" class="footer-link">Kumar N.P <img src="images/npk-2.PNG" alt="gaja" title="gaja" height="22" width="22"></a></p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">↑</button>
+
+    <!-- Single java script reference -->
+    <script src="scripts/script_chunk.js"></script>
+</body>
+</html>

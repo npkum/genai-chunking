@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunking Playbook for RAG</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <h1>The Chunking Playbook for RAG</h1>
+            <button class="menu-btn">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="what_is_chunking.html">What is Chunking</a>
+                <a href="whychunking.html">Why Chunking</a>
+                <div class="menu-item">
+                    <a href="how2choose_strategies.html">How to Choose Chunking Strategies</a>
+                    <div class="submenu">
+                        <a href="fixedLength-chunking.html">Fixed-length Chunking</a>
+                        <a href="recursive-chunking.html">Recursive Chunking</a>
+                        <a href="contentAware-chunking.html">Content-aware Chunking</a>
+                        <a href="adaptive-chunking.html" class="indented">Adaptive Chunking</a>
+                        <a href="slidingWindow-chunking.html" class="indented">Sliding-window Chunking</a>
+                        <a href="semantic-chunking.html">Semantic Chunking</a>
+                        <a href="hybrid-chunking.html">Hybrid Chunking</a>
+                        <a href="agentic-chunking.html">Agentic Chunking</a>
+                    </div>
+                </div>
+                <a href="https://www.linkedin.com/in/kumar-np" target="_blank">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container main-content">
+        <h1>Hybrid Chunking</h1>
+		<p>Hybrid chunking integrates multiple chunking methods to maximize the advantages of both fixed-size and semantic chunking. For instance, an initial stage may employ fixed-size chunking for rapid indexing, while the retrieval phase utilizes semantic chunking to maintain contextual integrity. By combining tools like spaCy for semantic analysis with custom scripts for fixed-size chunking, this approach creates a flexible strategy tailored to specific use case requirements.</p>
+		
+
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h2>Use Cases</h2>
+                <h3>Customer service (Retail Industry)</h3>
+                <p>In customer service chatbots, hybrid chunking can effectively retrieve information about product inquiries while ensuring that responses are contextually relevant and enriched with marketing language and details.</p>
+
+                <h3>Investment analysis (Financial Services)</h3>
+                <p>In investment analysis, hybrid chunking is employed to manage various data types, from formal financial reports to casual market commentary, ensuring thorough evaluation and relevant information extraction.</p>
+
+                  <h2>Hybrid Chunking Code</h2>
+                <div class="section">
+                    <div style="width: 100%; max-width: 950px; height: 300px; overflow: hidden; border: 1px solid #ccc; border-radius: 8px;">
+                        <iframe src="implementation_code/Hybrid_Chunking_code.html" width="100%" height="100%" style="border: none;"></iframe>
+                    </div>
+                </div>
+
+                <h2>Example of Hybrid Chunking Result</h2>
+                <div class="image-container">
+                <img src="images/hybrid_chunking_result.png" alt="Hybrid Chunking Example Result" class="content-image center" width="45%">
+                <div class="zoom-controls">
+                    <span class="zoom-icon zoom-in"><img src="images/zoom-in_24.png" alt="Zoom In"></span>
+                    <span class="zoom-icon zoom-out"><img src="images/zoom-out_24.png" alt="Zoom Out"></span>
+                </div>
+               </div>
+
+			<h2> Pros and Cons of Hybrid Chunking</h2>
+			<table table class="pros-cons">
+				<thead>
+					<tr >
+						<th>Pros</th>
+						<th>Cons</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><b>Improved Contextual Understanding</b> : By combining fixed-size and semantic chunking, it enhances the model's ability to maintain context and relevance in responses.</td>
+						<td><b>Complex Implementation</b> : Developing and maintaining a hybrid system can be more complicated than using a single chunking method.</td>
+					</tr>
+					<tr>
+						<td><b>Customizability</b> : It allows for tailoring the chunking approach to specific use cases, optimizing performance based on the nature of the data and tasks.</td>
+						<td><b>Resource Consumption</b> : It may require more computational resources, impacting performance and response times, especially with larger datasets.</td>
+					</tr>
+					<tr>
+						<td><b>Efficient Retrieval</b> : The initial fixed-size chunking enables quick indexing, while semantic chunking ensures deeper comprehension during retrieval, improving response accuracy.</td>
+						<td><b>Potential Overhead</b> :The dual-layer processing might introduce delays if not optimized, which could affect real-time applications.</td>
+					</tr>
+					<tr>
+						<td><b>Dynamic Adaptation</b> : It enables dynamic modification of chunk boundaries based on context or specific requirements of the task.</td>
+						<td><b>Need for Fine-Tuning</b> : The effectiveness of hybrid chunking often depends on careful tuning and evaluation, which can be time-consuming.</td>
+					</tr>						
+					
+				</tbody>
+			</table>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="semantic-chunking.html"><span>◁</span> Previous</a>
+            <a href="agentic-chunking.html">Next <span>▷</span></a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Linkedin: <a href="https://www.linkedin.com/in/kumar-np" target="_blank" class="footer-link">Kumar N.P <img src="images/npk-2.PNG" alt="gaja" title="gaja" height="22" width="22"></a></p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">↑</button>
+
+    <!-- Single java script reference -->
+    <script src="scripts/script_chunk.js"></script>
+</body>
+</html>

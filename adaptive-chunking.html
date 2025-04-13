@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunking Playbook for RAG</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <h1>The Chunking Playbook for RAG</h1>
+            <button class="menu-btn">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="what_is_chunking.html">What is Chunking</a>
+                <a href="whychunking.html">Why Chunking</a>
+                <div class="menu-item">
+                    <a href="how2choose_strategies.html">How to Choose Chunking Strategies</a>
+                    <div class="submenu">
+                        <a href="fixedLength-chunking.html">Fixed-length Chunking</a>
+                        <a href="recursive-chunking.html">Recursive Chunking</a>
+                        <a href="contentAware-chunking.html">Content-aware Chunking</a>
+                        <a href="adaptive-chunking.html" class="indented">Adaptive Chunking</a>
+                        <a href="slidingWindow-chunking.html" class="indented">Sliding-window Chunking</a>
+                        <a href="semantic-chunking.html">Semantic Chunking</a>
+                        <a href="hybrid-chunking.html">Hybrid Chunking</a>
+                        <a href="agentic-chunking.html">Agentic Chunking</a>
+                    </div>
+                </div>
+                <a href="https://www.linkedin.com/in/kumar-np" target="_blank">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container main-content">
+        <h1>Adaptive Chunking</h1>
+		<p><br>Adaptive chunking is a more advanced and sophisticated approach within the broader category of content-aware chunking.</br>
+        Adaptive chunking enhances the context-aware method by dynamically adjusting text segments based on their content and complexity. This advanced technique employs natural language processing algorithms to analyse the structure and semantics of the text, identifying logical endpoints and themes to determine where chunks should begin and end. Many adaptive chunking methods also incorporate machine learning to optimize chunk sizes and overlaps.
+		</p>
+
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h2>Use Cases</h2>
+                <h3>Manuscripts (Publishing)</h3>
+                <p>Authors and editors can use adaptive chunking to refine manuscripts by breaking down content into coherent segments, ensuring that each section effectively communicates its intended message while maintaining overall narrative flow.</p>
+
+                <h3>Customer Support</h3>
+                <p>Support systems can implement adaptive chunking to organize and retrieve information from knowledge bases more effectively, allowing agents to provide quicker and more accurate responses to customer inquiries.</p>
+
+                  <h2>Adaptive Chunking Code</h2>
+                <div class="section">
+                    <div style="width: 100%; max-width: 950px; height: 300px; overflow: hidden; border: 1px solid #ccc; border-radius: 8px;">
+                        <iframe src="implementation_code/Adaptive_Chunking_code.html" width="100%" height="100%" style="border: none;"></iframe>
+                    </div>
+                </div>
+
+                <h2>Example of Adaptive Chunking Result</h2>
+                <div class="image-container">
+                <img src="images/adaptive_chunking_result.png" alt="Adaptive Chunking Example Result" class="content-image center" width="45%">
+                <div class="zoom-controls">
+                    <span class="zoom-icon zoom-in"><img src="images/zoom-in_24.png" alt="Zoom In"></span>
+                    <span class="zoom-icon zoom-out"><img src="images/zoom-out_24.png" alt="Zoom Out"></span>
+                </div>
+               </div>
+
+			<h2> Pros and Cons of Adaptive Chunking</h2>
+			<table table class="pros-cons">
+				<thead>
+					<tr >
+						<th>Pros</th>
+						<th>Cons</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><b>Enhanced Relevance</b> : By dynamically adjusting chunk sizes based on content, adaptive chunking helps ensure that each chunk contains coherent and relevant information, improving the quality of outputs.</td>
+						<td><b>Dependence on Quality of NLP Tools</b> : The effectiveness of adaptive chunking relies on the accuracy of the natural language processing algorithms used, which may vary in performance across different languages or types of text.</td>
+					</tr>
+					<tr>
+						<td><b>Better Handling of Long Texts</b> : It allows for effective processing of long documents by breaking them into meaningful parts, which can be particularly useful for LLMs with input size limitations.</td>
+						<td><b>Overhead</b> : The process of analysing overlapped text can introduce additional computational overhead, which may negate some efficiency gains, especially for real-time applications.</td>
+					</tr>			
+				</tbody>
+			</table>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="contentAware-chunking.html"><span>◁</span> Previous</a>
+            <a href="slidingWindow-chunking.html">Next <span>▷</span></a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Linkedin: <a href="https://www.linkedin.com/in/kumar-np" target="_blank" class="footer-link">Kumar N.P <img src="images/npk-2.PNG" alt="gaja" title="gaja" height="22" width="22"></a></p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">↑</button>
+
+    <!-- Single java script reference -->
+    <script src="scripts/script_chunk.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunking Playbook for RAG</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <h1>The Chunking Playbook for RAG</h1>
+            <button class="menu-btn">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="what_is_chunking.html">What is Chunking</a>
+                <a href="whychunking.html">Why Chunking</a>
+                <div class="menu-item">
+                    <a href="how2choose_strategies.html">How to Choose Chunking Strategies</a>
+                    <div class="submenu">
+                        <a href="fixedLength-chunking.html">Fixed-length Chunking</a>
+                        <a href="recursive-chunking.html">Recursive Chunking</a>
+                        <a href="contentAware-chunking.html">Content-aware Chunking</a>
+                        <a href="adaptive-chunking.html" class="indented">Adaptive Chunking</a>
+                        <a href="slidingWindow-chunking.html" class="indented">Sliding-window Chunking</a>
+                        <a href="semantic-chunking.html">Semantic Chunking</a>
+                        <a href="hybrid-chunking.html">Hybrid Chunking</a>
+                        <a href="agentic-chunking.html">Agentic Chunking</a>
+                    </div>
+                </div>
+                <a href="https://www.linkedin.com/in/kumar-np" target="_blank">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container main-content">
+        <h2>How To Choose Right Chunking Strategy for a RAG Applications</h2>
+		
+				<p>There are various chunking strategies, each with its own strengths and weaknesses. Understanding these techniques is essential for applying the right strategy in the appropriate scenario.<p>
+				<p> When deciding on a chunking strategy, it's crucial to consider how your application will use the retrieved information. For example, if the primary goal is to identify relevant documents, smaller chunks may be sufficient. However, if your application requires in-depth analysis or summarization of the content, larger chunks that provide richer context will likely be more effective. By carefully evaluating the downstream use of the retrieved information, you can determine the optimal chunking strategy for your specific needs.<p>
+				<p> The tailored approach allows you to move beyond a one-size-fits-all methodology, maximizing the effectiveness of your application. In the next section, we will explore various text chunking and splitting strategies, with a sample code to help you implement these techniques effectively.</p>
+            </div>
+       
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="whychunking.html"><span>&#9665;</span> Previous</a>
+            <a href="fixedLength-chunking.html">Next <span>&#9655;</span></a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Linkedin: <a href="https://www.linkedin.com/in/kumar-np" target="_blank" class="footer-link">Kumar N.P <img src="images/npk-2.PNG" alt="gaja" title="gaja" height="22" width="22"></a></p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">↑</button>
+
+    <!-- Single java script reference -->
+    <script src="scripts/script_chunk.js"></script>
+</body>
+</html>
