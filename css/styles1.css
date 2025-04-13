@@ -1,0 +1,360 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    font-size: 16px; /* Base font size for scalability */
+}
+
+/* Container for content */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Header styles */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: none; /* Hidden by default on mobile */
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.nav-links.active {
+    display: flex; /* Shown when menu is toggled */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Submenu styles */
+.menu-item {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    flex-direction: column;
+    background-color: #34495e;
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+.menu-item.active .submenu,
+.menu-item:hover .submenu {
+    display: flex;
+}
+
+.submenu a {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+}
+
+.submenu a:hover {
+    background-color: #3d566e;
+}
+
+.indented {
+    margin-left: 1rem;
+}
+
+/* Mobile menu button */
+.menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Main content */
+.main-content {
+    padding: 2rem 0;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Intro wrapper */
+.intro-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.intro-text {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Content wrapper */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.text-content {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Iframe container */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Image container */
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.content-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.zoom-controls {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.zoom-icon {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zoom-icon img {
+    width: 16px;
+    height: 16px;
+}
+
+.zoom-icon:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Pros and Cons table */
+table.pros-cons {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+table.pros-cons th,
+table.pros-cons td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+table.pros-cons thead tr {
+    background-color: #f2f2f2;
+}
+
+table.pros-cons tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem 0;
+}
+
+.pagination a {
+    padding: 0.5rem 1rem;
+    background-color: #3d85c6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pagination a:hover {
+    background-color: #16a085;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #3d85c6;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.25rem;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: #16a085;
+}
+
+/* Media Queries */
+
+/* Small devices (tablets, 600px and up) */
+@media screen and (min-width: 600px) {
+    nav h1 {
+        font-size: 1.75rem;
+    }
+
+    .intro-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .intro-text {
+        flex: 1;
+        margin-right: 1rem;
+    }
+
+    .content-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .text-content {
+        flex: 1;
+    }
+}
+
+/* Medium devices (tablets/desktops, 768px and up) */
+@media screen and (min-width: 768px) {
+    .menu-btn {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        padding: 0;
+    }
+
+    .submenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 200px;
+    }
+
+    .container {
+        padding: 1.5rem;
+    }
+
+    .main-content {
+        font-size: 1.05rem;
+    }
+}
+
+/* Large devices (desktops, 1024px and up) */
+@media screen and (min-width: 1024px) {
+    nav h1 {
+        font-size: 2rem;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+    }
+
+    .submenu a {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 2rem;
+    }
+
+    .main-content {
+        padding: 3rem 0;
+    }
+
+    .image-container {
+        max-width: 800px;
+    }
+}
