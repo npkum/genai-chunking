@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Menu</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #333;
+    }
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu > li {
+      position: relative;
+    }
+
+    .menu > li > a {
+      display: block;
+      padding: 15px 20px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .menu li:hover > a {
+      background-color: #444;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 180px;
+      background-color: #444;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      z-index: 1000;
+    }
+
+    .submenu li a {
+      display: block;
+      padding: 10px 15px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .submenu li a:hover {
+      background-color: #555;
+    }
+
+    .menu li:hover .submenu {
+      display: block;
+    }
+
+    /* Responsive */
+    .menu-toggle {
+      display: none;
+      padding: 15px 20px;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 5px 0;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .menu > li {
+        width: 100%;
+      }
+
+      .menu li:hover .submenu {
+        display: none;
+      }
+
+      .submenu-toggle {
+        display: inline-block;
+        float: right;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .submenu {
+        position: static;
+      }
+
+      .submenu.active {
+        display: block;
+      }
+
+      .menu-toggle {
+        display: block;
+        background-color: #333;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="menu" id="mainMenu">
+      <li><a href="#">Home</a></li>
+      <li>
+        <a href="how2choose_strategies.html">Services <span class="submenu-toggle" onclick="toggleSubmenu(event)">&#x25BC;</span></a>
+        <ul class="submenu">
+          <li><a href="fixedLength-chunking.html">Web Design</a></li>
+          <li><a href="recursive-chunking.html">SEO</a></li>
+          <li><a href="contentAware-chunking.html">Marketing</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">About <span class="submenu-toggle" onclick="toggleSubmenu(event)">&#x25BC;</span></a>
+        <ul class="submenu">
+          <li><a href="#">Company</a></li>
+          <li><a href="#">Team</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mainMenu').classList.toggle('active');
+    }
+
+    function toggleSubmenu(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      const submenu = event.target.closest('li').querySelector('.submenu');
+      submenu.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
