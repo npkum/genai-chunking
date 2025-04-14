@@ -152,7 +152,7 @@ a {
 
         @media screen and (max-width: 767px) {
             .menu-btn {
-                display: none; /* block */
+                display: block;
             }
 
             .nav-links {
