@@ -34,7 +34,7 @@
         }
 
         .nav-links {
-            display: flex;
+            display: flex; /* flex */
             gap: 20px;
             position: relative;
         }
@@ -152,7 +152,7 @@ a {
 
         @media screen and (max-width: 767px) {
             .menu-btn {
-                display: block;
+                display: none; /* block */
             }
 
             .nav-links {
